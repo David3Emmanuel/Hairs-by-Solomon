@@ -19,6 +19,10 @@
     }
 }
 
+.cta {
+    text-decoration: none;
+}
+
 .image-container {
     padding: 1rem;
     width: 100%;

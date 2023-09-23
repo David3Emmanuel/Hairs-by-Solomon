@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./HomePage.css";
 import Product from "./Product";
 import Slideshow from "./Slideshow";
@@ -37,10 +38,12 @@ export default function HomePage() {
         <div className="flex-container">
             <section>
                 <h1 className="motto"><span>BEAUTY</span> <span>FIRST</span></h1>
-                <div className="image-container">
-                    <h3>QUALITY WEAVES AND ATTACHMENTS</h3>
-                    <p className="browse-cta">Browse our products</p>
-                </div>
+                <Link to="/shop" className="cta">
+                    <div className="image-container">
+                        <h3>LUXURY YOU CAN TRUST</h3>
+                        <p className="browse-cta">Browse our products</p>
+                    </div>
+                </Link>
             </section>
             {/* <a className="down-arrow" href="#latest"><span className="material-icons">arrow_downward</span></a> */}
             <div className="latest" id="latest">

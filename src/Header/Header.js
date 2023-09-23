@@ -4,7 +4,7 @@ import "./Header.css";
 export default function Header() {
     return <header>
         <p className="material-icons menu-btn">menu</p>
-        <h1>NDIFREKE</h1>
+        <h1>HAIRS BY SOLOMON</h1>
         <nav>
             <NavItem name="Wishlist" icon="favorite" />
             <NavItem name="Contact" icon="mail" />
