@@ -3,6 +3,7 @@ import "./HomePage.css";
 import Product from "./Product";
 import Slideshow from "./Slideshow";
 import Testimonial from "./Testimonial";
+import ContactPage from "../Contact/ContactPage";
 
 const PRODUCTS = [
     "Peruvian Kinky Curly Hair",
@@ -59,5 +60,6 @@ export default function HomePage() {
                 {TESTIMONIALS.map((testimonial, i) => <Testimonial {...testimonial} key={i} />)}
             </Slideshow>
         </div>
+        <ContactPage />
     </div>
 }
