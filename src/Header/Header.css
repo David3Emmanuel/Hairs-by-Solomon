@@ -1,18 +1,24 @@
 header {
-    /* background-color: rgb(49, 56, 70); */
     background-color: hsl(287, 82%, 65%);
     color: white;
-    padding: 1rem;
+    padding: 1.5rem;
+}
+
+.title-row {
+    flex: 1;
     display: flex;
+    justify-content: space-around;
 }
 
 .menu-btn {
-    margin: auto 10px auto 5px;
+    margin: auto 0 auto 0;
     cursor: pointer;
+    width: 2rem;
 }
 
-header>a {
+.title-row>a {
     flex: 1;
+    text-align: center;
     text-decoration: none;
 }
 
@@ -22,9 +28,27 @@ header h1 {
     font-size: 24px;
 }
 
+header .menu-form {
+    display: none;
+    padding: 0;
+    height: 3rem;
+    margin: auto 1rem;
+    flex: 1;
+}
+
 @media screen and (min-width: 800px) {
+    header {
+        display: flex;
+        padding: 1.5rem 0;
+    }
     header h1 {
         font-size: 36px;
         flex: 2;
+    }
+    .menu-btn {
+        display: none;
+    }
+    header .menu-form {
+        display: flex;
     }
 }

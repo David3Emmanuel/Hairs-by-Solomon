@@ -18,6 +18,11 @@
 .product {
     width: 10rem;
     margin: 0 0.75rem;
+    text-decoration: none;
+}
+
+.product:hover {
+    text-decoration: underline white;
 }
 
 .product-image {
@@ -44,6 +49,11 @@
     height: 5rem;
     display: flex;
     justify-content: space-around;
+}
+
+.product:hover .title-box {
+    /* background-color: hsl(243, 75%, 61%);
+    color: hsl(39, 100%, 90%); */
 }
 
 .product p {

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import "./HomePage.css";
-import Product from "./Product";
+import Product from "../Shop/Product";
 import Slideshow from "./Slideshow";
 import Testimonial from "./Testimonial";
 import ContactPage from "../Contact/ContactPage";

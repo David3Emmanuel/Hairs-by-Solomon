@@ -5,10 +5,12 @@ import NavItems from "./NavItems";
 export default function MenuHeader({ showMenu, setShowMenu }) {
     return <>
         <header>
-            <p className="material-icons menu-btn" onClick={() => setShowMenu(false)}>close</p>
-            <Link to="/"><h1>HAIRS BY SOLOMON</h1></Link>
+            <div className="title-row">
+                <p className="material-icons menu-btn" onClick={() => setShowMenu(false)}>close</p>
+                <Link to="/"><h1>HAIRS BY SOLOMON</h1></Link>
+            </div>
         </header>
-        <form action="shop">
+        <form action="shop" className="menu-form">
             <input name="search" placeholder="Search for a product..." className="search" />
             <button>SEARCH</button>
         </form>

@@ -1,7 +1,8 @@
 nav {
     display: flex;
-    justify-content: space-around;
-    flex: 1;
+    justify-content: space-between;
+    /* flex: 1; */
+    padding-right: 3rem;
 }
 
 nav.menu-nav {
@@ -48,6 +49,12 @@ nav.menu-nav .header-icon-text {
 }
 
 @media screen and (min-width: 800px) {
+    nav {
+        padding-right: 0;
+    }
+    .nav-item {
+        padding: 0 0.5rem;
+    }
     .header-icon-text {
         display: inline-block;
     }
