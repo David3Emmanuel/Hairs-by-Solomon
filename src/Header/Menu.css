@@ -19,14 +19,12 @@
 
 .menu-form input {
     flex: 1;
-    padding: 0.5rem;
     border: none;
 }
 .menu-form button {
-    padding: 0.5rem;
     font-weight: 500;
     color: hsl(287, 82%, 65%);
     background-color: white;
-    font-family: 'Rubik', sans-serif;
     border: none;
+    border-radius: 0;
 }

@@ -1,7 +1,4 @@
 .contact-page {
-    padding: 1rem;
-    background-color: hsl(0, 0%, 15%);
-    color: white;
     background-color: hsl(287, 82%, 95%);
     color: black;
     flex: 1;
@@ -14,6 +11,7 @@
 .contact-page div {
     max-width: 400px;
     margin: 1rem;
+    margin-top: 0;
 }
 
 .contact-page h1 {

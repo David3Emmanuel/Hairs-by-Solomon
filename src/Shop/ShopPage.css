@@ -1,0 +1,8 @@
+.shop-products {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.shop .product {
+    margin-bottom: 1rem;
+}

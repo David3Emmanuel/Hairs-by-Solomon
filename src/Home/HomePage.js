@@ -4,12 +4,7 @@ import Product from "../Shop/Product";
 import Slideshow from "./Slideshow";
 import Testimonial from "./Testimonial";
 import ContactPage from "../Contact/ContactPage";
-
-const PRODUCTS = [
-    "Peruvian Kinky Curly Hair",
-    "Body Wave Hair",
-    "Long Straight Black Hair"
-]
+import useShop from "../Shop/useShop";
 
 const TESTIMONIALS = [
     {
@@ -35,6 +30,8 @@ const TESTIMONIALS = [
 ]
 
 export default function HomePage() {
+    const products = useShop();
+
     return <div className="home">
         <div className="flex-container">
             <section>
@@ -47,12 +44,16 @@ export default function HomePage() {
                 </Link>
             </section>
             {/* <a className="down-arrow" href="#latest"><span className="material-icons">arrow_downward</span></a> */}
-            <div className="latest" id="latest">
-                <h2>LATEST</h2>
-                <div className="products">
-                    {PRODUCTS.map((product, i) => <Product name={product} key={i} />)}
+            {products && <div className="latest" id="latest">
+                <div className="latest-title-row">
+                    <h2>LATEST</h2>
+                    <Link to="/shop" className="see-all-cta">See all &gt;</Link>
                 </div>
-            </div>
+                <div className="products">
+                    {/* {products.slice(0, 3).map((product, i) => <Product {...product} key={i} />)} */}
+                    {products.map((product, i) => <Product {...product} key={i} />)}
+                </div>
+            </div>}
         </div>
         <div className="testimonials-container">
             <h2>What our customers have to say</h2>
