@@ -3,11 +3,13 @@ nav {
     justify-content: space-between;
     /* flex: 1; */
     padding-right: 3rem;
+    height: 2.5rem;
 }
 
 nav.menu-nav {
     background-color: hsl(0, 0%, 15%);
     flex-direction: column;
+    height: auto;
 }
 
 .nav-item {
@@ -29,6 +31,7 @@ nav.menu-nav .nav-item {
 .nav-item.active {
     color: hsl(209, 100%, 25%);
 }
+
 nav.menu-nav .nav-item.active {
     color: hsl(287, 82%, 65%);
 }
@@ -41,6 +44,7 @@ nav.menu-nav .nav-item.active {
 .header-icon-text {
     display: none;
     text-align: center;
+    align-self: center;
 }
 
 nav.menu-nav .header-icon-text {
@@ -52,10 +56,28 @@ nav.menu-nav .header-icon-text {
     nav {
         padding-right: 0;
     }
+
     .nav-item {
         padding: 0 0.5rem;
     }
+
     .header-icon-text {
         display: inline-block;
     }
+}
+
+.profile-nav-item {
+    position: relative;
+}
+
+.profile-icon {
+    background-color: skyblue;
+    width: 2.5rem;
+    height: 2.5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 1.25rem;
+    color: white;
 }

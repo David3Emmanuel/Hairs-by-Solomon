@@ -1,7 +1,8 @@
 header {
     background-color: hsl(287, 82%, 65%);
     color: white;
-    padding: 1.5rem;
+    padding: 1rem 1.5rem;
+    position: relative;
 }
 
 .title-row {
@@ -52,4 +53,23 @@ header .menu-form {
     header .menu-form {
         display: flex;
     }
+}
+
+.profile-menu {
+    background-color: hsl(0, 0%, 15%);
+    padding: 0 1rem;
+    width: 300px;
+    position: absolute;
+    /* margin-top: 1rem; */
+    top: 100%;
+    right: 0;
+    z-index: 10;
+    border: dashed white;
+    border-width: 0 1px 1px 1px;
+    border-radius: 0 0 0 2rem;
+}
+
+.profile-menu > * {
+    /* border-bottom: 1px solid white; */
+    padding: 0.5rem;
 }

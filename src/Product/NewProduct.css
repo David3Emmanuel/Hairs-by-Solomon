@@ -32,6 +32,7 @@
 .product-input p {
     display: none;
     margin: auto 0;
+    min-width: 10rem;
     margin-right: 1rem;
 }
 

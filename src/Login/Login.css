@@ -1,0 +1,57 @@
+.login {
+    width: 90%;
+    margin: 3rem auto;
+    box-shadow: 2px 2px 4px 1px darkgray;
+    border-radius: 1rem;
+    background-color: white;
+    padding: 2rem;
+}
+
+.login-input {
+    justify-content: space-between;
+}
+
+.login-input p {
+    min-width: 5rem;
+}
+
+.login-input input {
+    border-radius: 0.5rem;
+}
+
+.toggle-login-mode {
+    margin: 2rem 0 1rem 0;
+    text-align: center;
+}
+
+.toggle-login-mode span {
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.login form button {
+    background-color: hsl(197, 71%, 50%);
+}
+
+.validate .invalid input {
+    border-color: hsl(0, 100%, 50%);
+    background-color: hsl(0, 100%, 90%);;
+}
+
+.validate-error-message {
+    color: red;
+    font-size: 10px;
+    margin: 0 !important;
+    text-align: right;
+    display: none;
+}
+
+.validate .validate-error-message {
+    display: block;
+}
+
+.login-error-message {
+    color: red;
+    text-align: center;
+}
