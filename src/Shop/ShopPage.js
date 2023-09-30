@@ -1,14 +1,12 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import Product from "./Product";
-import useShop from "./useShop";
 import { GlobalContext } from "../utils/globalStates";
 
 import "./ShopPage.css";
 
 export default function ShopPage() {
-    const products = useShop();
-    const { userDetails } = useContext(GlobalContext);
+    const { userDetails, products } = useContext(GlobalContext);
 
     return <div className="shop">
         <h1>Shop</h1>

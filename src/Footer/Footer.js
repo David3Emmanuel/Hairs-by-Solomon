@@ -12,7 +12,7 @@ export default function Footer() {
         <div id="contact">
             <h1>Follow Us</h1>
             <a href="https://web.facebook.com/profile.php?id=100090316114814"><img alt="facebook" src="/facebook.png" /> Facebook page</a>
-            <a href="https://wa.me/+2347039669253"><img alt="whatsapp" src="/whatsapp.ico" /> +234 703 966 9253</a>
+            <a href="https://wa.me/2347039669253"><img alt="whatsapp" src="/whatsapp.ico" /> +234 703 966 9253</a>
             <a href="https://www.instagram.com/sure19021992/"><img alt="instagram" src="/instagram.ico" /> Instagram page</a>
             <a href="mailto:hairsbysolomon@gmail.com"><img alt="gmail" src="/gmail.ico" /> hairsbysolomon@gmail.com</a>
         </div>

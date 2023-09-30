@@ -3,14 +3,15 @@
     color: black;
     flex: 1;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-around;
+    min-height: 80vh;
 }
 
 .contact-page div {
-    max-width: 400px;
-    margin: 1rem;
+    max-width: 500px;
+    margin: 1rem auto;
     margin-top: 0;
 }
 

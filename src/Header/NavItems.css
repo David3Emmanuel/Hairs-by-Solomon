@@ -55,6 +55,7 @@ nav.menu-nav .header-icon-text {
 @media screen and (min-width: 800px) {
     nav {
         padding-right: 0;
+        margin: auto;
     }
 
     .nav-item {
@@ -63,6 +64,10 @@ nav.menu-nav .header-icon-text {
 
     .header-icon-text {
         display: inline-block;
+    }
+
+    .profile-nav-item .header-icon-text {
+        display: none;
     }
 }
 

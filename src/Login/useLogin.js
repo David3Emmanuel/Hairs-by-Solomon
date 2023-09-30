@@ -50,8 +50,7 @@ export default function useLogin(validationFunctions) {
                         set(newUserRef, {
                             name: loginDetails.name,
                             email: loginDetails.email,
-                            role: "user",
-                            wishlist: []
+                            role: "user"
                         });
                         // Redirect
                         navigate('/shop');

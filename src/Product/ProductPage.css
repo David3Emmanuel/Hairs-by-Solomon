@@ -1,0 +1,60 @@
+.product-page {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.product-page-image {
+    display: block;
+    width: 300px;
+    height: fit-content;
+    margin: 0 auto;
+    border: 5px solid hsl(0, 0%, 100%);
+    border-radius: 2rem;
+    box-shadow: 2px 2px 4px 1px darkgray;
+}
+
+.product-info {
+    flex: 1;
+    margin: 1rem auto 0 auto;
+    max-width: 500px;
+    border-top: 1px solid black;
+}
+
+.product-info h2 {
+    color: hsl(0, 0%, 15%);
+    text-align: center;
+}
+
+.product-info p {
+    font-family: "Rubik", sans-serif;
+    font-size: 17px;
+    text-align: center;
+}
+
+.product-page-buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+.product-info button {
+    color: white;
+    background-color: hsl(197, 71%, 50%);
+    padding: 1rem;
+    margin: 1rem auto;
+    width: 15rem;
+}
+
+.product-info button img {
+    width: 25px;
+}
+
+.product-info button span {
+    text-shadow: 2px 2px darkgray;
+    font-size: 25px;
+    vertical-align: middle;
+}
+
+.add-to-wishlist span {
+    color: red;
+}

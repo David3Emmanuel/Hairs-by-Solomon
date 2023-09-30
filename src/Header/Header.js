@@ -21,16 +21,16 @@ export default function Header() {
             <input name="search" placeholder="Search for a product..." className="search" />
             <button>SEARCH</button>
         </form>
-        {showProfile && <ProfileMenu />}
+        {showProfile && <ProfileMenu onClick={() => setShowProfile(false)} />}
         <Menu showMenu={showMenu} setShowMenu={setShowMenu} />
     </header>
 }
 
-function ProfileMenu() {
+function ProfileMenu({onClick}) {
     const navigate = useNavigate();
     const { userDetails } = useContext(GlobalContext);
 
-    if (userDetails) return <div className="profile-menu">
+    if (userDetails) return <div className="profile-menu" onClick={onClick}>
         <p>{userDetails.name}</p>
         <p>{userDetails.email}</p>
         <Link to="/wishlist" style={{display: "block"}}>Wishlist</Link>

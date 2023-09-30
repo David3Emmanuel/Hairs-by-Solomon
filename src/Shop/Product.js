@@ -1,17 +1,29 @@
 import { Link } from "react-router-dom";
 import "./Product.css";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import { ref as storageRef, getDownloadURL } from "firebase/storage";
 import { storage } from "../utils/firebase";
+import { GlobalContext } from "../utils/globalStates";
 
-export default function Product({ name, price }) {
+export default function Product({ name, _price }) {
     let formattedName = name.replaceAll(' ', '-');
-    const [imageUrl, setImageUrl] = useState('');
+    const { products } = useContext(GlobalContext);
 
+    // Product Image
+    const [imageUrl, setImageUrl] = useState('');
     useEffect(() => {
         const imageRef = storageRef(storage, `products/${name}`);
         getDownloadURL(imageRef).then(setImageUrl);
     }, [name]);
+
+    // Product price
+    const [price, setPrice] = useState(_price || 0);
+    useEffect(() => {
+        if (products) {
+            const product = products.find(prod => prod.name === name);
+            if (product) setPrice(product.price);
+        }
+    }, [products, name]);
 
     return <Link className="product" to={`/product/${formattedName}`}>
         <p className="price">{price ? '₦' + price.toString().split(/(?=(?:\d{3})+$)/).join(",") : "Free"}</p>

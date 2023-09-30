@@ -10,7 +10,7 @@ export default function useNewProduct(originalProduct) {
     const [imageUrl, setImageUrl] = useState('');
 
     function reducer(state, action) {
-        if (action.type === "NAME") return { ...state, name: action.value };
+        if (action.type === "NAME") return { ...state, name: action.value.replaceAll('-', '') };
         if (action.type === "PRICE") {
             let price = action.value;
             price = price.replaceAll(/[^\d]/g, '')

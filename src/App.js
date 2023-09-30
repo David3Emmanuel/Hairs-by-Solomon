@@ -6,6 +6,7 @@ import ContactPage from "./Contact/ContactPage";
 import Root from "./Root";
 import ProductPage from "./Product/ProductPage";
 import NewProduct from "./Product/NewProduct";
+import Wishlist from "./Wishlist/Wishlist";
 
 import "./App.css";
 import Login from "./Login/Login";
@@ -17,6 +18,7 @@ export default function App() {
       <Route path="contact" element={<ContactPage />} />
       <Route path="shop" element={<ShopPage />} />
       <Route path="login" element={<Login />} />
+      <Route path="wishlist" element={<Wishlist />} />
       <Route path="product/new" element={<NewProduct />} />
       <Route path="product/:product" element={<ProductPage />} />
       <Route path="*" element={<div>Page not found</div>} />

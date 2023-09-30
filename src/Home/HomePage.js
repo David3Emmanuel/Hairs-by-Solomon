@@ -1,10 +1,13 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
-import "./HomePage.css";
+import { GlobalContext } from "../utils/globalStates";
+
 import Product from "../Shop/Product";
 import Slideshow from "./Slideshow";
 import Testimonial from "./Testimonial";
 import ContactPage from "../Contact/ContactPage";
-import useShop from "../Shop/useShop";
+
+import "./HomePage.css";
 
 const TESTIMONIALS = [
     {
@@ -30,7 +33,7 @@ const TESTIMONIALS = [
 ]
 
 export default function HomePage() {
-    const products = useShop();
+    const {products} = useContext(GlobalContext);
 
     return <div className="home">
         <div className="flex-container">
