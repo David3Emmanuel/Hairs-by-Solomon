@@ -1,5 +1,5 @@
 import { useEffect, useContext } from "react";
-import "./Wishlist.css";
+import "../Shop/ShopPage.css";
 import { GlobalContext } from "../utils/globalStates";
 import { useNavigate } from "react-router-dom";
 import Product from "../Shop/Product";
@@ -17,11 +17,13 @@ export default function Wishlist() {
         return clearTimeout(timeout);
     }, [navigate, userDetails]);
 
-    return <div className="wishlist">
+    return <div className="wishlist shop">
         <h1>My Wishlist <span className="material-icons" style={{
             color: "red",
             fontSize: "2rem"
         }}>favorite</span></h1>
-        {wishlist.map((productName, i) => <Product name={productName} key={i} />)}
+        <div className="shop-products">
+            {wishlist.map((productName, i) => <Product name={productName} key={i} />)}
+        </div>
     </div>
 }
