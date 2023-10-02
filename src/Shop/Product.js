@@ -11,9 +11,12 @@ export default function Product({ name, _price }) {
 
     // Product Image
     const [imageUrl, setImageUrl] = useState('');
+    const [loadingImageUrl, setLoadingImageUrl] = useState(true);
     useEffect(() => {
         const imageRef = storageRef(storage, `products/${name}`);
-        getDownloadURL(imageRef).then(setImageUrl);
+        getDownloadURL(imageRef)
+            .then(setImageUrl)
+            .finally(() => setLoadingImageUrl(false));
     }, [name]);
 
     // Product price
@@ -28,7 +31,8 @@ export default function Product({ name, _price }) {
     return <Link className="product" to={`/product/${formattedName}`}>
         <p className="price">{price ? '₦' + price.toString().split(/(?=(?:\d{3})+$)/).join(",") : "Free"}</p>
         <div className="product-image">
-            <img src={imageUrl} alt={name} />
+            {loadingImageUrl && <div style={{borderRadius: "inherit"}} className="skeleton" />}
+            {!loadingImageUrl && <img src={imageUrl} alt={name} />}
         </div>
         <div className="title-box">
             <p>{name}</p>

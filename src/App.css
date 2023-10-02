@@ -45,3 +45,36 @@ button {
     margin: 0 auto;
     border-radius: 0.5rem;
 }
+
+.skeleton {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-color: hsl(0, 0%, 50%);
+    overflow: hidden;
+}
+
+.skeleton::after {
+    background-image: linear-gradient(
+      90deg,
+      hsla(0, 0%, 100%, 0) 0,
+      hsla(0, 0%, 100%, 0.2) 20%,
+      hsla(0, 0%, 100%, 0.5) 60%,
+      hsla(0, 0%, 100%, 0)
+    );
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: inherit;
+    content: "";
+    transform: translateX(-100%);
+    animation: skeleton 5s infinite;
+}
+
+@keyframes skeleton {
+    100% {
+        transform: translateX(100%);
+    }
+}

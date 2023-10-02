@@ -3,15 +3,15 @@ import { NavLink } from "react-router-dom";
 import { GlobalContext } from "../utils/globalStates";
 import "./NavItems.css";
 
-export default function NavItems({ className, setShowProfile }) {
+export default function NavItems({ className, hideProfile=false, setShowProfile }) {
     const { userDetails } = useContext(GlobalContext);
 
     return <nav className={className}>
         <NavItem name="Shop" icon="shopping_cart" to="/shop" />
         <NavItem name="Wishlist" icon="favorite" to="/wishlist" />
         <NavItem name="Contact" icon="phone" to="/contact" />
-        {userDetails && <div className="profile-nav-item nav-item">
-            <span className="profile-icon header-icon" onClick={() => setShowProfile(prev => !prev)}>{userDetails.name[0]}</span>
+        {userDetails && !hideProfile && <div className="profile-nav-item nav-item">
+            <span className="profile-icon header-icon" onClick={() => setShowProfile(true)}>{userDetails.name[0]}</span>
             <span className="header-icon-text">My Profile</span>
         </div>}
         {!userDetails && <NavItem name="Sign Up" icon="person" to="/login" />}

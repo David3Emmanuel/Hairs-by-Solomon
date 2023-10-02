@@ -4,8 +4,8 @@ import MenuHeader from "./MenuHeader";
 
 export default function Menu({ showMenu, setShowMenu }) {
     return createPortal(
-        showMenu && <div className="menu">
-            <MenuHeader showMenu={showMenu} setShowMenu={setShowMenu} />
+        showMenu && <div className="menu" >
+            <MenuHeader setShowMenu={setShowMenu} />
         </div>,
         document.getElementById("menu")
     )

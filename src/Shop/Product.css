@@ -67,7 +67,7 @@
     height: 10rem;
     --border-color: hsl(0, 0%, 25%);
     border: 3px solid var(--border-color);
-    background-color: var(--border-color);
+    background-color: hsl(0, 0%, 50%);
     border-radius: 1rem 1rem 0 0;
 }
 

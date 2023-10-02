@@ -1,0 +1,41 @@
+.profile-menu {
+    background-color: hsl(0, 0%, 15%);
+    padding: 1rem;
+    padding-bottom: 0;
+    width: 50%;
+    min-width: 300px;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: 10;
+    border: dashed gray;
+    border-width: 0 1px 1px 1px;
+    border-radius: 0 0 2rem 2rem;
+}
+
+@media screen and (min-width: 800px) {
+    .profile-menu {
+        right: 25%;
+    }
+}
+
+.menu .profile-menu {
+    position: static;
+    width: 100%;
+    color: white;
+    border: none;
+    border-top: 2px dashed white;
+    border-bottom: 1px solid gray;
+}
+
+.profile-menu > * {
+    /* border-bottom: 1px solid white; */
+    padding: 0.5rem;
+}
+
+.profile-menu .profile-icon {
+    display: none;
+}
+.menu .profile-menu .profile-icon {
+    display: inline-block;
+}

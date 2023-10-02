@@ -8,6 +8,7 @@ export const GlobalContext = createContext();
 export function GlobalContextProvider({ children }) {
     // Users
     const [userDetails, setUserDetails] = useState(null);
+    const [loadingUserDetails, setLoadingUserDetails] = useState(true);
     useEffect(() => {
         onAuthStateChanged(auth, user => {
             if (user) {
@@ -16,15 +17,18 @@ export function GlobalContextProvider({ children }) {
                 onValue(userRef, snapshot => {
                     const data = snapshot.val();
                     setUserDetails({ ...data, uid });
+                    setLoadingUserDetails(false);
                 })
             } else {
                 setUserDetails(null);
+                setLoadingUserDetails(false);
             }
         })
     }, []);
 
     // Products
     const [products, setProducts] = useState(null);
+    const [loadingProducts, setLoadingProducts] = useState(true);
     useEffect(() => {
         const productsRef = ref(db, "products");
         onValue(productsRef, snapshot => {
@@ -36,12 +40,13 @@ export function GlobalContextProvider({ children }) {
             } else {
                 setProducts(null);
             }
+            setLoadingProducts(false);
         })
     }, []);
 
     // Wishlist
     const [wishlist, setWishlist] = useState([]);
-    console.log("Creating wishlist...");
+    const [loadingWishlist, setLoadingWishlist] = useState(true);
     useEffect(() => {
         if (!userDetails) {
             setWishlist([]);
@@ -56,10 +61,11 @@ export function GlobalContextProvider({ children }) {
             } else {
                 setWishlist([]);
             }
+            setLoadingWishlist(false);
         })
     }, [userDetails])
 
-    return <GlobalContext.Provider value={{ userDetails, products, wishlist }}>
+    return <GlobalContext.Provider value={{ userDetails, loadingUserDetails, products, loadingProducts, wishlist, loadingWishlist }}>
         {children}
     </GlobalContext.Provider>
 }
