@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./Login.css";
 import useLogin from "./useLogin";
 
@@ -45,7 +45,7 @@ export default function Login() {
                 validate={emailValidate}
             />
             <LoginInput
-                name="password" label="Password" type="password"
+                name="password" label="Password" password
                 value={loginDetails.password} dispatch={dispatch}
                 validate={passwordValidate}
             />
@@ -54,24 +54,34 @@ export default function Login() {
     </div>
 }
 
-function LoginInput({ name, label, value, dispatch, validate, ...attr }) {
+function LoginInput({ name, label, value, dispatch, validate, password, ...attr }) {
     const validateError = validate(value);
+    const [showPassword, setShowPassword] = useState(false);
+
+    const [inputType, setInputType] = useState("text");
+    useEffect(() => {
+        setInputType((password && !showPassword) ? "password" : "text");
+    }, [password, showPassword]);
+
+    function onInput(e) {
+        dispatch({ type: name.toUpperCase(), value: e.target.value })
+    }
 
     return <>
         {validateError !== "" && <p className="validate-error-message">{validateError}</p>}
         <div className={`login-input product-input ${validateError === "" ? "" : "invalid"}`}>
             <p>{label}</p>
-            <input className="mobile"
-                type="text" name={name} value={value}
-                placeholder={label}
-                onInput={e => dispatch({ type: name.toUpperCase(), value: e.target.value })}
-                {...attr}
-            />
-            <input className="desktop"
-                type="text" name={name} value={value}
-                onInput={e => dispatch({ type: name.toUpperCase(), value: e.target.value })}
-                {...attr}
-            />
+            <div className="login-input__input-container">
+                <input className="mobile" type={inputType} name={name} value={value} placeholder={label} onInput={onInput} {...attr} />
+                <input className="desktop" type={inputType} name={name} value={value} onInput={onInput} {...attr} />
+                {password && <span
+                    className="material-icons"
+                    onClick={() => setShowPassword(prev => !prev)}
+                    style={{ display: "flex", justifyContent: "center", flexDirection: "column", padding: "1rem" }}
+                >
+                    {showPassword ? "visibility_off" : "visibility"}
+                </span>}
+            </div>
         </div>
     </>
 }
