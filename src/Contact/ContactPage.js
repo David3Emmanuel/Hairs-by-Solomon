@@ -12,7 +12,7 @@ export default function ContactPage() {
         </div>
         <div>
             <h1>Contact Us</h1>
-            <p>Have any questions, suggestions, or feedback? We'd love to hear from you! React out to us on Facebook, Instagram, and Whatsapp with the links below</p>
+            <p>Have any questions, suggestions, or feedback? We'd love to hear from you! Reach out to us on <a href="https://web.facebook.com/profile.php?id=100090316114814">Facebook</a>, <a href="https://www.instagram.com/sure19021992/">Instagram</a>, and <a href="https://wa.me/2347039669253">Whatsapp</a> with the links below</p>
         </div>
     </div>
 }

@@ -15,6 +15,7 @@ export default function ProductPage() {
         <div className="product-info">
             <h2>{productName}</h2>
             {product && <p>Price: {'₦' + formattedPrice}</p>}
+            <p>{product && product.description}</p>
             <div className="product-page-buttons">
                 <button onClick={orderProduct} style={{ backgroundColor: "hsl(138deg 87.38% 40.39%)" }}><img src="/whatsapp.ico" alt="whatsapp"></img> Order on Whatsapp</button>
                 {inWishlist && <button onClick={removeFromWishlist} className="add-to-wishlist"><span className="material-icons" style={{ color: "hsl(0, 100%, 35%)" }}>heart_broken</span> Remove from wishlist</button>}
@@ -24,7 +25,6 @@ export default function ProductPage() {
                         <span className="material-icons">delete_forever</span>Remove Product
                     </button>}
             </div>
-            <p>{product && product.description}</p>
         </div>
     </div >
 }

@@ -6,7 +6,7 @@ header {
 }
 
 .title-row {
-    flex: 1;
+    padding: 0;
     display: flex;
     justify-content: space-around;
 }
@@ -36,12 +36,16 @@ header .menu-form {
     height: 3rem;
     margin: auto 1rem;
     flex: 1;
+    max-width: 400px;
 }
 
 @media screen and (min-width: 800px) {
     header {
         display: flex;
         padding: 1.5rem 0;
+    }
+    .title-row {
+        padding: 0 5rem;
     }
     header h1 {
         font-size: 36px;

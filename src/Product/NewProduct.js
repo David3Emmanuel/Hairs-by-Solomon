@@ -9,7 +9,7 @@ export default function NewProduct() {
         <form onSubmit={submit}>
             <ProductInput name="name" label="Product name..." value={product.name} dispatch={dispatch} />
             <ProductInput name="price" label="Enter price in naira" value={product.price} dispatch={dispatch} />
-            <input name="image" type="file" onChange={handleImage} />
+            <input name="image" type="file" onChange={handleImage} accept="image/*" />
             {imageUrl && <img src={imageUrl} alt="product" />}
             <p>Product description</p>
             <textarea
