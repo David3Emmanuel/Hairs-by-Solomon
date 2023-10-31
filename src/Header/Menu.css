@@ -6,9 +6,19 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    background-color: hsl(0, 0%, 15%);
     z-index: 2;
     cursor: pointer;
+}
+
+.menu .title-row {
+    padding: 1rem 1rem 0 1rem;
+    color: white;
+}
+
+.menu .title-row h1 {
+    color: white;
 }
 
 .menu-form {

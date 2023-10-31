@@ -6,6 +6,7 @@ import Product from "../Shop/Product";
 import Slideshow from "./Slideshow";
 import Testimonial from "./Testimonial";
 import ContactPage from "../Contact/ContactPage";
+import SearchInput from "../Header/SearchInput";
 
 import "./HomePage.css";
 
@@ -33,31 +34,36 @@ const TESTIMONIALS = [
 ]
 
 export default function HomePage() {
-    const {products} = useContext(GlobalContext);
+    const { products } = useContext(GlobalContext);
 
     return <div className="home">
-        <div className="flex-container">
+        <div className="hero">
             <section>
-                <h1 className="motto"><span>BEAUTY</span> <span>FIRST</span></h1>
-                <Link to="/shop" className="cta">
-                    <div className="image-container">
-                        <h3>LUXURY YOU CAN TRUST</h3>
-                        <p className="browse-cta">Browse our products</p>
-                    </div>
-                </Link>
+                {/* <h1 className="motto"><span>BEAUTY</span> <span>FIRST</span></h1>
+                <h3>LUXURY YOU CAN TRUST</h3>
+                <Link to="/shop" className="cta">Browse our products</Link> */}
+                <img src="/logo-colored2.png" alt="logo" width="100%" />
+                <h1>The best place to buy top quality hair extensions and wigs</h1>
+                <p>Shop by hair type, brand, or special offers!</p>
+                <div className="hero-search-container">
+                    <SearchInput />
+                    <button>SEARCH</button>
+                </div>
             </section>
-            {/* <a className="down-arrow" href="#latest"><span className="material-icons">arrow_downward</span></a> */}
-            {products && <div className="latest" id="latest">
-                <div className="latest-title-row">
-                    <h2>LATEST</h2>
-                    <Link to="/shop" className="see-all-cta">See all &gt;</Link>
-                </div>
-                <div className="products">
-                    {/* {products.slice(0, 3).map((product, i) => <Product {...product} key={i} />)} */}
-                    {products.map((product, i) => <Product {...product} key={i} />)}
-                </div>
-            </div>}
+            <img src="/hero-image.png" alt="Hero" />
         </div>
+
+        {/* <a className="down-arrow" href="#latest"><span className="material-icons">arrow_downward</span></a> */}
+        {products && <div className="latest" id="latest">
+            <div className="latest-title-row">
+                <h2>LATEST</h2>
+                <Link to="/shop" className="see-all-cta">See all &gt;</Link>
+            </div>
+            <div className="products">
+                {/* {products.slice(0, 3).map((product, i) => <Product {...product} key={i} />)} */}
+                {products && products.map((product, i) => <Product {...product} key={i} />)}
+            </div>
+        </div>}
         <div className="testimonials-container">
             <h2>What our customers have to say</h2>
             <Slideshow className="testimonials">

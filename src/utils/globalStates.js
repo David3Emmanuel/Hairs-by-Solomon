@@ -34,9 +34,11 @@ export function GlobalContextProvider({ children }) {
         onValue(productsRef, snapshot => {
             const data = snapshot.val();
             if (data) {
-                setProducts(Object.entries(data).map(([id, product]) => {
+                const _products = Object.entries(data).map(([id, product]) => {
                     return { ...product, id };
-                }));
+                });
+                _products.reverse();
+                setProducts(_products);
             } else {
                 setProducts(null);
             }

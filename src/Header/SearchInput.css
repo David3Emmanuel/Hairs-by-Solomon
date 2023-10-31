@@ -1,0 +1,35 @@
+.search-input {
+    overflow: hidden;
+    height: 3rem;
+    /* margin: auto 1rem; */
+    width: 300px;
+    border: 1px solid #d3d3d8;
+    border-radius: 0.5rem;
+}
+
+.search-input form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.search-input input {
+    flex: 1;
+    border: none;
+}
+
+.search-input form input:focus-visible {
+    outline: none;
+}
+
+.search-input:has(input:focus-visible) {
+    border: 2px solid #1a73e8;
+}
+
+.search-input button {
+    min-width: 3rem;
+    font-weight: 500;
+    color: hsl(287, 82%, 65%);
+    background-color: white;
+    border: none;
+}
