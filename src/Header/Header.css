@@ -1,9 +1,6 @@
 header {
-    /* background-color: hsl(287, 82%, 65%); */
-    /* color: white; */
     background-color: inherit;
     color: black;
-    /* padding: 1rem 1.5rem; */
     padding: 0;
     position: relative;
 }
@@ -31,8 +28,6 @@ header h1 {
     font-family: 'Rubik', sans-serif;
     font-size: 24px;
     color: hsl(287, 82%, 65%);
-    /* color: #4a69e2; */
-    /* color: white; */
 }
 
 .header-contents {

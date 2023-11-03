@@ -3,7 +3,6 @@ footer {
     color: white;
     padding: 1rem;
     display: flex;
-    /* justify-content: space-around; */
     flex-wrap: wrap;
 }
 
@@ -16,7 +15,6 @@ footer > div {
 
 footer h1, footer h2 {
     color: orange;
-    /* text-align: center; */
 }
 
 footer a {

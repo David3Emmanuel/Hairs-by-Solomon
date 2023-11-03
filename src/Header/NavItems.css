@@ -17,7 +17,6 @@ nav.menu-nav {
     flex-wrap: wrap;
     text-decoration: none;
     color: black;
-    /* color: white; */
     justify-content: center;
     align-items: center;
 }
@@ -33,10 +32,6 @@ nav.menu-nav .nav-item {
 
 nav.menu-nav .header-icon-text {
     font-weight: 500;
-}
-
-.nav-item.active {
-    /* color: hsl(287, 82%, 65%); */
 }
 
 .nav-item.active .header-icon {

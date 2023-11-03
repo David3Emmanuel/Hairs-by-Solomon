@@ -34,7 +34,6 @@ function ProductSkeleton() {
             width: "10rem",
             height: "15rem",
             borderRadius: "1rem",
-            border: "3px solid hsl(0, 0%, 25%)"
         }}>
     </div>
 }

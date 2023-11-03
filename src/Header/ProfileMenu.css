@@ -25,11 +25,9 @@
     color: white;
     border: none;
     border-top: 1px dashed white;
-    /* border-bottom: 1px solid gray; */
 }
 
 .profile-menu > * {
-    /* border-bottom: 1px solid white; */
     padding: 0.5rem;
 }
 

@@ -1,7 +1,6 @@
 .search-input {
     overflow: hidden;
     height: 3rem;
-    /* margin: auto 1rem; */
     width: 300px;
     border: 1px solid #d3d3d8;
     border-radius: 0.5rem;

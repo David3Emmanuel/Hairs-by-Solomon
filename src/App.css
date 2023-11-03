@@ -19,7 +19,6 @@ main {
     height: 100%;
     display: flex;
     flex-direction: column;
-    /* background-color: hsl(287, 82%, 95%); */
     background-color: white;
     color: black;
 }

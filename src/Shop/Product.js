@@ -37,5 +37,6 @@ export default function Product({ name, _price }) {
         <div className="title-box">
             <p>{name}</p>
         </div>
+        <div className="product__hover-overlay">View Product</div>
     </Link>
 }

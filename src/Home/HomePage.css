@@ -1,5 +1,4 @@
 .home {
-    /* background-color: hsl(287, 82%, 95%); */
     color: black;
     padding: 0;
 }
@@ -9,9 +8,10 @@
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 1rem;
+    gap: 2rem;
 }
 
-.hero section {
+.hero .section1 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -33,18 +33,18 @@
     }
 }
 
-.hero section,
-.hero section>* {
+.hero .section1,
+.hero .section1>* {
     animation-name: slide-in;
     animation-duration: 1s;
 }
 
-.hero section img {
+.hero .section1 img {
     width: 345px;
     margin: auto;
 }
 
-.hero section h1 {
+.hero .section1 h1 {
     font-family: 'Poppins', sans-serif;
     font-size: 2rem;
     font-weight: 500;
@@ -111,7 +111,6 @@
 }
 
 .motto {
-    /* text-align: center; */
     margin: 0 auto 1rem auto;
     padding-top: 1rem;
     font-weight: 600;
@@ -124,14 +123,22 @@
     ;
 }
 
+.section2 {
+    flex: 1;
+    height: 100%;
+    overflow: auto;
+}
+
 @media screen and (min-width: 800px) {
     .hero {
         height: 75vh;
-        padding: 5rem 10rem;
+        padding: 2rem 5rem;
+        margin-bottom: 2rem;
     }
 
-    .hero>img {
-        margin: 0;
+    .hero .section2 img {
+        display: block;
+        margin: auto;
     }
 
     .hero-search-container {
@@ -139,13 +146,14 @@
         height: fit-content;
         justify-content: space-between;
         margin-top: 5rem;
+        margin-bottom: 2rem;
     }
 
-    .home>section {
+    .home>.section1 {
         width: 50vw;
     }
 
-    .home section h1 {
+    .home .section1 h1 {
         text-align: left;
     }
 
