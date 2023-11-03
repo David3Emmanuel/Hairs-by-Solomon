@@ -1,4 +1,4 @@
-import { useState, useRef, useContext } from "react";
+import { useState, useEffect, useRef, useContext } from "react";
 import { Link } from "react-router-dom";
 import { GlobalContext } from "../utils/globalStates";
 
@@ -21,12 +21,26 @@ export default function Header() {
         setTimeout(() => setShowProfile(false), 100);
     });
 
+    const headerContentsRef = useRef(null);
+    const titleRowRef = useRef(null);
+    useEffect(() => {
+        if (headerContentsRef.current === null) return;
+        const handleScroll = (e) => {
+            let headerY = headerContentsRef.current.getBoundingClientRect().y;
+            let titleY = titleRowRef.current.getBoundingClientRect().y;
+            let titleHeight = titleRowRef.current.getBoundingClientRect().height;
+            headerContentsRef.current.classList.toggle("sticky", window.scrollY > 0 && titleY + titleHeight <= 0);
+        }
+        window.addEventListener("scroll", handleScroll)
+        return () => window.removeEventListener("scroll", handleScroll)
+    }, [headerContentsRef])
+
     return <header>
-        <div className="title-row">
+        <div className="title-row" ref={titleRowRef}>
             <p className="material-icons menu-btn" onClick={() => setShowMenu(true)}>menu</p>
             <Link to="/"><h1>HAIRS BY SOLOMON</h1></Link>
         </div>
-        <div className="header-contents">
+        <div className="header-contents" ref={headerContentsRef}>
             <NavItems showProfile={showProfile} setShowProfile={setShowProfile} setShowMenu={setShowMenu} />
             <div style={{ display: "flex" }}>
                 <SearchInput />
