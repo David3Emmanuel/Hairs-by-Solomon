@@ -40,7 +40,8 @@ export default function HomePage() {
         <div className="hero">
             <section className="section1">
                 <img src="/logo-colored2.png" alt="logo" width="100%" />
-                <h1>The best place to buy top quality hair extensions and wigs</h1>
+                {/* <h1>The best place to buy top quality hair extensions and wigs</h1> */}
+                <h1>Quality hair extensions and wigs</h1>
                 <p>Shop by hair type, brand, or special offers!</p>
                 <div className="hero-search-container">
                     <SearchInput />
