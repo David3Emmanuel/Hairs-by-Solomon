@@ -32,7 +32,6 @@ header h1 {
 }
 
 .header-contents {
-    /* padding: 1rem 1.5rem 0 1.5rem; */
     padding: 1rem 1.5rem;
     background-color: white;
     z-index: 1;
@@ -58,11 +57,6 @@ header .search-input {
 }
 
 @media screen and (min-width: 800px) {
-    header {
-        padding: 0;
-        /* padding-top: 1rem; */
-    }
-
     .header-contents {
         display: flex;
         justify-content: space-between;
@@ -104,19 +98,10 @@ header .search-input {
 }
 
 .divider {
-    /* margin: 1rem auto 0 auto; */
-    /* margin: 0 auto; */
     width: calc(100% - 3rem);
     height: 2px;
     background-color: #f0f0f0;
     border-radius: 2px;
     position: absolute;
     left: 1.5rem;
-}
-
-.header-contents.sticky .divider {
-    /* width: 100vw;
-    transform: translateX(-1.5rem);
-    background-color: hsl(0, 0%, 80%);
-    height: 1px; */
 }

@@ -26,7 +26,6 @@ export default function Header() {
     useEffect(() => {
         if (headerContentsRef.current === null) return;
         const handleScroll = (e) => {
-            let headerY = headerContentsRef.current.getBoundingClientRect().y;
             let titleY = titleRowRef.current.getBoundingClientRect().y;
             let titleHeight = titleRowRef.current.getBoundingClientRect().height;
             headerContentsRef.current.classList.toggle("sticky", window.scrollY > 0 && titleY + titleHeight <= 0);

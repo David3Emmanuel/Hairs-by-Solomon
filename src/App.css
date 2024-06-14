@@ -28,7 +28,7 @@ main > div {
 }
 
 h1 {
-    color: orange;
+    color: hsl(287, 82%, 65%);;
 }
 
 input, textarea {
