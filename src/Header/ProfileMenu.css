@@ -1,6 +1,4 @@
 .profile-menu {
-    background-color: hsl(0, 0%, 15%);
-    color: white;
     background-color: hsl(0, 0%, 90%);
     color: hsl(0, 0%, 15%);
     padding: 1rem;
@@ -28,6 +26,7 @@
 .menu .profile-menu {
     position: static;
     width: 100%;
+    background-color: hsl(0, 0%, 15%);
     color: white;
     border: none;
     border-top: 1px dashed white;
